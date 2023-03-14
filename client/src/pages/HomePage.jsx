@@ -37,11 +37,11 @@ const HomePage = () => {
                 <tr className="bg-success text-white">
                   <th>#</th>
                   <th>اسم السورة</th>
-                  <th>সুরা নাম</th>
+
                   <th>Surā nāme</th>
                   <th>English Translation</th>
                   <th>TOTAL AYAH</th>
-                  <th>PARA</th>
+
                   <th>REVEALATION TYPE</th>
                 </tr>
               </thead>
@@ -64,14 +64,7 @@ const HomePage = () => {
                         {quran?.item.name}
                       </Link>
                     </td>
-                    <td>
-                      <Link
-                        to={`/sura/${quran?.item?.number}`}
-                        style={{ textDecoration: 'none' }}
-                      >
-                        {quran?.banglaName}
-                      </Link>
-                    </td>
+
                     <td>
                       <Link
                         to={`/sura/${quran?.item?.number}`}
@@ -96,14 +89,7 @@ const HomePage = () => {
                         {quran?.item.numberOfAyahs}
                       </Link>
                     </td>
-                    <td>
-                      <Link
-                        to={`/sura/${quran?.item?.number}`}
-                        style={{ textDecoration: 'none' }}
-                      >
-                        {quran?.para}
-                      </Link>
-                    </td>
+
                     <td>
                       <Link
                         to={`/sura/${quran?.item?.number}`}
