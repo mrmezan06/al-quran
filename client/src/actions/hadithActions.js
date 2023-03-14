@@ -1,5 +1,5 @@
 import axios from 'axios';
-// import { BASE_URL } from '../constants/BASE_URL';
+import { BASE_URL } from '../constants/BASE_URL';
 import {
   HADITH_BOOK_INDEX_BY_CHAPTER_AND_RANGE_FAIL,
   HADITH_BOOK_INDEX_BY_CHAPTER_AND_RANGE_REQUEST,
@@ -19,7 +19,7 @@ export const getHadithIndex = () => async (dispatch) => {
   try {
     dispatch({ type: HADITH_INDEX_REQUEST });
 
-    const { data } = await axios.get(`/api/hadith/index`);
+    const { data } = await axios.get(`${BASE_URL}/api/hadith/index`);
     // console.log(data);
 
     dispatch({ type: HADITH_INDEX_SUCCESS, payload: data });
@@ -41,7 +41,7 @@ export const getHadithBookIndex =
       dispatch({ type: HADITH_BOOK_INDEX_REQUEST });
 
       const { data } = await axios.get(
-        `/api/hadith/index/${book_key}?pageNumber=${pageNumber}`
+        `${BASE_URL}/api/hadith/index/${book_key}?pageNumber=${pageNumber}`
       );
       // console.log(data);
 
@@ -63,7 +63,7 @@ export const getHadithsByBookAndChapterAndRange =
       dispatch({ type: HADITH_BOOK_INDEX_BY_CHAPTER_AND_RANGE_REQUEST });
 
       const { data } = await axios.get(
-        `/api/hadith/get/${book_key}/${chapter}/${start}/${range}`
+        `${BASE_URL}/api/hadith/get/${book_key}/${chapter}/${start}/${range}`
       );
       console.log(data);
 
@@ -88,7 +88,7 @@ export const getHadithsByBookKey =
       dispatch({ type: HADITH_BY_BOOK_KEY_REQUEST });
 
       const { data } = await axios.get(
-        `/api/hadith/book/${book_key}?pageNumber=${pageNumber}`
+        `${BASE_URL}/api/hadith/book/${book_key}?pageNumber=${pageNumber}`
       );
       console.log(data);
 
