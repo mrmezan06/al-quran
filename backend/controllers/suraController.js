@@ -10,7 +10,10 @@ const getAllSuraIndex = async (req, res) => {
       .sort({ number: 1 })
       .limit(pageSize)
       .skip(pageSize * (page - 1));
-    const sura = await Sura.find({}).sort({ sura_no: 1 });
+    const sura = await Sura.find({})
+      .sort({ sura_no: 1 })
+      .limit(pageSize)
+      .skip(pageSize * (page - 1));
     const count = await SuraAE.countDocuments({});
 
     if (!suraAE) {
