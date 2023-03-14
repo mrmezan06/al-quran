@@ -27,15 +27,15 @@ const getSuraByNo = async (req, res) => {
     const count = await AyatBN.countDocuments({ sura });
 
     const ayatBN = await AyatBN.find({ sura })
-      .sort({ aya: 1 })
+
       .limit(pageSize)
       .skip(pageSize * (page - 1));
     const ayatEN = await AyatEN.find({ sura })
-      .sort({ aya: 1 })
+
       .limit(pageSize)
       .skip(pageSize * (page - 1));
     const ayatAR = await AyatAR.find({ sura })
-      .sort({ VerseIDAr: 1 })
+
       .limit(pageSize)
       .skip(pageSize * (page - 1));
     // paginate ayatAudio.ayahs array

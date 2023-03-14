@@ -7,7 +7,6 @@ const getAllSuraIndex = async (req, res) => {
     const pageSize = 13;
     const page = Number(req.query.pageNumber) || 1;
     const suraAE = await SuraAE.find({})
-      .sort({ number: 1 })
       .limit(pageSize)
       .skip(pageSize * (page - 1));
 
