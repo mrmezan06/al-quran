@@ -47,55 +47,55 @@ const HomePage = () => {
               </thead>
               <tbody>
                 {suraList.map((quran) => (
-                  <tr key={quran?.item.number}>
+                  <tr key={quran?.number}>
                     <td>
                       <Link
-                        to={`/sura/${quran?.item?.number}`}
+                        to={`/sura/${quran?.number}`}
                         style={{ textDecoration: 'none' }}
                       >
-                        {quran?.item.number}
+                        {quran?.number}
                       </Link>
                     </td>
                     <td>
                       <Link
-                        to={`/sura/${quran?.item?.number}`}
+                        to={`/sura/${quran?.number}`}
                         style={{ textDecoration: 'none' }}
                       >
-                        {quran?.item.name}
-                      </Link>
-                    </td>
-
-                    <td>
-                      <Link
-                        to={`/sura/${quran?.item?.number}`}
-                        style={{ textDecoration: 'none' }}
-                      >
-                        {quran?.item.englishName}
-                      </Link>
-                    </td>
-                    <td>
-                      <Link
-                        to={`/sura/${quran?.item?.number}`}
-                        style={{ textDecoration: 'none' }}
-                      >
-                        {quran?.item.englishNameTranslation}
-                      </Link>
-                    </td>
-                    <td>
-                      <Link
-                        to={`/sura/${quran?.item?.number}`}
-                        style={{ textDecoration: 'none' }}
-                      >
-                        {quran?.item.numberOfAyahs}
+                        {quran?.name}
                       </Link>
                     </td>
 
                     <td>
                       <Link
-                        to={`/sura/${quran?.item?.number}`}
+                        to={`/sura/${quran?.number}`}
                         style={{ textDecoration: 'none' }}
                       >
-                        {quran?.item.revelationType}
+                        {quran?.englishName}
+                      </Link>
+                    </td>
+                    <td>
+                      <Link
+                        to={`/sura/${quran?.number}`}
+                        style={{ textDecoration: 'none' }}
+                      >
+                        {quran?.englishNameTranslation}
+                      </Link>
+                    </td>
+                    <td>
+                      <Link
+                        to={`/sura/${quran?.number}`}
+                        style={{ textDecoration: 'none' }}
+                      >
+                        {quran?.numberOfAyahs}
+                      </Link>
+                    </td>
+
+                    <td>
+                      <Link
+                        to={`/sura/${quran?.number}`}
+                        style={{ textDecoration: 'none' }}
+                      >
+                        {quran?.revelationType}
                       </Link>
                     </td>
                   </tr>
