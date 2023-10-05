@@ -63,6 +63,9 @@ You need to provide some credientials in the .env file.
 - [x] [redux-thunk](https://www.npmjs.com/package/redux-thunk)
 - [x] [react](https://www.npmjs.com/package/react)
 
+### Preview
+![Preview](./preview.png)
+
 ### Back-end
 
 - [x] [dotenv](https://www.npmjs.com/package/dotenv)
